@@ -8,7 +8,7 @@
     "dev": "nodemon . -e js,pug,yaml,html,css,json"
   },
   "keywords": [],
-  "author": "Boardroom One",
+  "author": "Chinedum Okerengwor",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
