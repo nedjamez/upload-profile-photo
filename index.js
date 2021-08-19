@@ -7,7 +7,7 @@ var request = require('request')
 const morgan = require('morgan')
 
 const app = express()
-const port = 5000
+const port = process.env.PORT || 5000
    
 // log request info
 app.use(morgan('tiny'))
@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
 app.post('/', upload.single('image'), async (req, res) => {
 
     const { filename: image } = req.file
-    npath = path.resolve(req.file.destination,'processed',image)
+    let npath = path.resolve(req.file.destination,'processed',image)
 
     // resize image
     await sharp(req.file.path)
